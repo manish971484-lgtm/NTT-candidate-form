@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTT DATA India — Candidate / Client Information Sheet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f4f7fb;
+      color: #0f172a;
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Print styling so recruiters/candidates can cleanly save as PDF */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      input, textarea, select {
+        border: none !important;
+        background: transparent !important;
+        padding: 2px 0 !important;
+        resize: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen py-4 px-2 sm:py-8 sm:px-6 lg:px-8 antialiased">
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden print-shadow-none">
+
+    <!-- Corporate Header Bar -->
+    <div class="bg-gradient-to-r from-[#003366] via-[#004c97] to-[#0066B3] px-5 py-6 sm:px-8 sm:py-7 text-white relative overflow-hidden">
+      <!-- Subtle geometric accent -->
+      <div class="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-white/5 pointer-events-none"></div>
+      <div class="absolute right-24 -bottom-16 w-40 h-40 rounded-full bg-sky-300/10 pointer-events-none"></div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 relative z-10">
+        <!-- Crisp NTT DATA Vector Brand Identity -->
+        <div class="flex items-center gap-4">
+          <div class="bg-white px-3.5 py-2.5 rounded-xl shadow-sm flex items-center justify-center shrink-0">
+            <!-- Vector NTT DATA Logo -->
+            <svg width="164" height="36" viewBox="0 0 210 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NTT DATA Logo">
+              <!-- NTT Dynamic Loop Emblem -->
+              <path d="M18.5 7C10.4919 7 4 13.4919 4 21.5C4 29.5081 10.4919 36 18.5 36C22.6 36 26.3 34.3 28.9 31.6L25.4 28.1C23.7 29.9 21.2 31 18.5 31C13.2533 31 9 26.7467 9 21.5C9 16.2533 13.2533 12 18.5 12C23.7467 12 28 16.2533 28 21.5V23.2H33V21.5C33 13.4919 26.5081 7 18.5 7Z" fill="#0066B3"/>
+              <path d="M18.5 15.5C15.1863 15.5 12.5 18.1863 12.5 21.5C12.5 24.8137 15.1863 27.5 18.5 27.5C21.8137 27.5 24.5 24.8137 24.5 21.5C24.5 18.1863 21.8137 15.5 18.5 15.5ZM18.5 23.5C17.3954 23.5 16.5 22.6046 16.5 21.5C16.5 20.3954 17.3954 19.5 18.5 19.5C19.6046 19.5 20.5 20.3954 20.5 21.5C20.5 22.6046 19.6046 23.5 18.5 23.5Z" fill="#003366"/>
+              <!-- NTT DATA Wordmark -->
+              <text x="41" y="29" fill="#003366" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="21" letter-spacing="0.5">NTT</text>
+              <text x="89" y="29" fill="#0066B3" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="21" letter-spacing="0.8">DATA</text>
+              <text x="42" y="40" fill="#475569" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="8.5" letter-spacing="2.2">INDIA ENTERPRISE</text>
+            </svg>
+          </div>
+          <div>
+            <span class="inline-block text-[11px] font-semibold uppercase tracking-widest text-sky-200 bg-white/10 px-2.5 py-0.5 rounded-full mb-1">
+              Talent Acquisition &amp; Client Onboarding
+            </span>
+            <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+              Client / Candidate Information Sheet
+            </h1>
+          </div>
+        </div>
+
+        <!-- Document Meta Badge -->
+        <div class="text-left sm:text-right text-xs text-sky-100 space-y-1 bg-white/10 px-3.5 py-2.5 rounded-xl border border-white/15">
+          <div class="font-semibold text-white">NTT DATA India Pvt. Ltd.</div>
+          <div>Status: <span class="text-emerald-300 font-semibold">● Editable Live Form</span></div>
+          <div id="currentDateDisplay" class="text-sky-200 text-[11px]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instructions & Quick Toolbar -->
+    <div class="bg-slate-50 border-b border-slate-200 px-5 py-3.5 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 no-print">
+      <p class="text-xs sm:text-sm text-slate-600">
+        <span class="font-semibold text-[#003366]">Instructions:</span> Verify pre-filled details, complete mandatory contact &amp; compensation columns (<span class="text-rose-600 font-bold">*</span>), and click <span class="font-semibold text-[#0066B3]">Submit Details</span>.
+      </p>
+      <div class="flex flex-wrap items-center gap-2">
+        <button type="button" onclick="resetToSampleData()" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 transition">
+          Restore Pre-filled Profile
+        </button>
+        <button type="button" onclick="clearAllFields()" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 transition">
+          Clear Form
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Editable Form -->
+    <form id="candidateForm" class="p-5 sm:p-8 space-y-8" novalidate>
+
+      <!-- SECTION 1: Tabular Structured Candidate / Client Columns -->
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm sm:text-base font-bold uppercase tracking-wider text-[#003366] flex items-center gap-2">
+            <span class="w-2 h-5 bg-[#0066B3] rounded-sm inline-block"></span>
+            1. Candidate &amp; Employment Profile (Editable Columns)
+          </h2>
+          <span class="text-xs text-slate-500 hidden sm:inline">Click any cell value to edit directly</span>
+        </div>
+
+        <!-- Structured Two-Column Responsive Table Layout -->
+        <div class="border border-slate-300 rounded-xl overflow-hidden shadow-xs">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="bg-[#003366] text-white text-left text-xs uppercase tracking-wider">
+                <th class="py-3 px-4 w-1/3 sm:w-[32%] border-r border-white/15 font-semibold">Field / Parameter</th>
+                <th class="py-3 px-4 font-semibold">Candidate / Client Details (Editable Input)</th>
+              </tr>
+            </thead>
+            <tbody id="structuredTableBody" class="divide-y divide-slate-200 bg-white">
+              <!-- Row 1: Candidate Name -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Candidate Full Name <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <input type="text" id="candidateName" name="Candidate Full Name" required
+                    value="Kirubasagar Jayabalan"
+                    placeholder="Enter full legal name"
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none font-medium text-slate-900 transition" />
+                </td>
+              </tr>
+
+              <!-- Row 2: Contact Email & Mobile (2-column split inside value cell) -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Contact Details <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Official / Personal Email ID *</label>
+                      <input type="email" id="emailId" name="Email ID" required
+                        placeholder="e.g., kirubasagar.j@email.com"
+                        class="w-full px-3 py-2 rounded-lg border border-amber-300 bg-amber-50/30 focus:bg-white focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Mobile Number (WhatsApp / Call) *</label>
+                      <input type="tel" id="mobileNumber" name="Mobile Number" required
+                        placeholder="e.g., +91 98400 XXXXX"
+                        class="w-full px-3 py-2 rounded-lg border border-amber-300 bg-amber-50/30 focus:bg-white focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 3: Total Experience -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Total Experience <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <input type="text" id="totalExperience" name="Total Experience" required
+                    value="20 Yrs 4 Months"
+                    placeholder="e.g., 20 Yrs 4 Months"
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                </td>
+              </tr>
+
+              <!-- Row 4: Compensation (Current CTC & Expected CTC) -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Compensation (CTC) <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Current CTC (Fixed + Variable)</label>
+                      <input type="text" id="currentCtc" name="Current CTC" required
+                        value="Rs. 25 Lacs"
+                        placeholder="e.g., Rs. 25 Lacs"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Expected CTC *</label>
+                      <input type="text" id="expectedCtc" name="Expected CTC" required
+                        placeholder="Enter expected annual CTC (e.g., Rs. 30 Lacs)"
+                        class="w-full px-3 py-2 rounded-lg border border-amber-300 bg-amber-50/30 focus:bg-white focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 5: Notice Period & ID Verification -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Notice Period &amp; ID Proof <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Notice Period / LWD *</label>
+                      <input type="text" id="noticePeriod" name="Notice Period" required
+                        placeholder="e.g., Immediate / 30 Days / 60 Days"
+                        class="w-full px-3 py-2 rounded-lg border border-amber-300 bg-amber-50/30 focus:bg-white focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">PAN / Aadhaar Last 4 Digits (Optional)</label>
+                      <input type="text" id="idLast4" name="PAN / Aadhaar Last 4 Digits" maxlength="10"
+                        placeholder="e.g., XXXX1234"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 6: Current Location & Preferred Location -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Location Details <span class="text-rose-600">*</span>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Current Location</label>
+                      <input type="text" id="currentLocation" name="Current Location" required
+                        value="Chennai"
+                        placeholder="Current City"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Preferred Location(s)</label>
+                      <input type="text" id="preferredLocation" name="Preferred Location" required
+                        value="Chennai"
+                        placeholder="Preferred City / Hybrid"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 7: Current Employment -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Current Organization &amp; Role
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Current Designation</label>
+                      <input type="text" id="currentDesignation" name="Current Designation"
+                        value="Senior Manager - Training (Training Head)"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Current Company</label>
+                      <input type="text" id="currentCompany" name="Current Company"
+                        value="iq backoffice"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 8: Previous Employment -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Previous Organization &amp; Role
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Previous Designation</label>
+                      <input type="text" id="previousDesignation" name="Previous Designation"
+                        value="Manager - Training"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                    <div>
+                      <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Previous Company</label>
+                      <input type="text" id="previousCompany" name="Previous Company"
+                        value="Aegis - An Essar Company"
+                        class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 9: Educational Qualifications -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200">
+                  Academic Qualifications
+                </td>
+                <td class="p-1.5 sm:px-3 space-y-2">
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Highest Qualification &amp; University</label>
+                    <input type="text" id="highestQualification" name="Highest Qualification"
+                      value="MBA - HR (Sikkim Manipal University)"
+                      class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-500 mb-0.5">Additional Qualification / Diploma</label>
+                    <input type="text" id="additionalQualification" name="Additional Qualification"
+                      value="Diploma - EEE (Sriram Polytechnic)"
+                      class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 transition" />
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 10: Key Skills & Domain Competencies -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200 align-top pt-4">
+                  Key Skills &amp; Core Competencies
+                  <p class="text-[11px] font-normal text-slate-500 mt-1">
+                    Editable comma-separated competencies &amp; tenure highlights.
+                  </p>
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <textarea id="keySkills" name="Key Skills" rows="4"
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 text-xs sm:text-sm leading-relaxed transition">Time Management, Leadership Development, Client Management (2.7Y), Experiential Learning Development, Training and Development (8Y), Data Management &amp; Analysis, Vendor Management, Event Management, Behavioural Development, Cost Management, Organisational Coaching, MS Office Proficiency, Emotional Coaching, Planning &amp; Organising, Leadership Coaching, BCP and Crisis Handling, Career Coaching, Life Coaching, Team Building, Process Enhancement (3.2Y), Creative Thinking &amp; Initiatives, Relationship &amp; Network Building (0.6Y), LMS Governance</textarea>
+                </td>
+              </tr>
+
+              <!-- Row 11: Additional Remarks / Client Notes -->
+              <tr class="hover:bg-sky-50/40 transition">
+                <td class="py-2.5 px-4 font-semibold text-slate-700 bg-slate-50/80 border-r border-slate-200 align-top pt-3.5">
+                  Candidate / Recruiter Remarks
+                </td>
+                <td class="p-1.5 sm:px-3">
+                  <textarea id="remarks" name="Remarks" rows="2"
+                    placeholder="Add shift flexibility, relocation notes, passport availability, or interview availability..."
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 text-sm transition"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add Custom Column/Row Button -->
+        <div class="mt-3 flex flex-wrap items-center justify-between gap-2 no-print">
+          <button type="button" onclick="addCustomRow()"
+            class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#0066B3] bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3.5 py-2 rounded-xl transition cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            Add Custom Field / Row
+          </button>
+          <span class="text-xs text-slate-500">Need extra columns like LinkedIn URL, Passport Status, or Client ID? Click "+ Add Custom Field / Row".</span>
+        </div>
+      </div>
+
+      <!-- Validation Alert Banner (Hidden by default) -->
+      <div id="validationBanner" class="hidden rounded-xl bg-rose-50 border border-rose-200 p-4 text-sm text-rose-800 flex items-start gap-3 no-print">
+        <svg class="w-5 h-5 text-rose-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <div>
+          <p class="font-semibold">Please complete all required fields highlighted in red:</p>
+          <p id="validationMessage" class="text-xs mt-0.5 text-rose-700"></p>
+        </div>
+      </div>
+
+      <!-- Declaration & Action Footer -->
+      <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <label class="flex items-start gap-2.5 text-xs text-slate-600 cursor-pointer select-none max-w-xl">
+          <input type="checkbox" id="declarationCheck" checked class="mt-0.5 rounded border-slate-300 text-[#0066B3] focus:ring-[#0066B3]" />
+          <span>
+            I confirm that the above details are accurate and authorize <strong>NTT DATA India</strong> recruitment teams to process this profile for client evaluation.
+          </span>
+        </label>
+
+        <div class="flex flex-wrap items-center gap-3 no-print">
+          <button type="button" onclick="window.print()"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-sm shadow-xs transition cursor-pointer">
+            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Print / Save PDF
+          </button>
+
+          <button type="submit"
+            class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#0066B3] hover:bg-[#003366] text-white font-semibold text-sm shadow-md shadow-sky-900/15 transition cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Submit Details
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Corporate Footer -->
+    <div class="bg-slate-100 border-t border-slate-200 px-5 py-3.5 sm:px-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+      <span>© NTT DATA India | Confidential Recruitment &amp; Client Information Sheet</span>
+      <span>Designed for Seamless Google Sites Live Embedding</span>
+    </div>
+  </div>
+
+  <!-- Submission Confirmation & Export Modal -->
+  <div id="confirmationModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden animate-fadeIn">
+      <!-- Modal Header -->
+      <div class="bg-[#003366] px-6 py-4 text-white flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-400 flex items-center justify-center text-emerald-300">
+            ✓
+          </span>
+          <div>
+            <h3 class="font-bold text-base">Candidate Information Submitted</h3>
+            <p class="text-xs text-sky-200">NTT DATA India — Verified Submission Summary</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal()" class="text-slate-300 hover:text-white text-xl leading-none px-2 py-1 rounded-lg">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-xs text-emerald-900 flex items-center justify-between gap-2">
+          <span><strong>Success!</strong> The candidate sheet is formatted and ready to share with the NTT DATA recruitment panel or client.</span>
+          <span id="submissionTimestamp" class="font-mono text-[11px] text-emerald-700 shrink-0"></span>
+        </div>
+
+        <!-- Formatted Summary Preview Box -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Formatted Summary Output</label>
+          <textarea id="summaryOutput" readonly rows="11"
+            class="w-full rounded-xl border border-slate-300 bg-slate-50 p-3.5 font-mono text-xs text-slate-800 focus:outline-none leading-relaxed"></textarea>
+        </div>
+
+        <!-- Toast Feedback -->
+        <div id="copyToast" class="hidden text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-2 rounded-lg text-center">
+          ✓ Copied formatted candidate details to clipboard!
+        </div>
+
+        <!-- Export & Share Actions -->
+        <div class="flex flex-wrap items-center justify-end gap-2.5 pt-2">
+          <button type="button" onclick="copySummaryToClipboard()"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0066B3] hover:bg-[#003366] text-white text-xs sm:text-sm font-semibold transition cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+            </svg>
+            Copy Summary to Clipboard
+          </button>
+
+          <button type="button" onclick="downloadCSV()"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-xs sm:text-sm font-semibold transition cursor-pointer">
+            <svg class="w-4 h-4 text-[#0066B3]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Export CSV Sheet
+          </button>
+
+          <button type="button" onclick="closeModal()"
+            class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold transition cursor-pointer">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Display current date in header
+    (function initDate() {
+      const dateEl = document.getElementById('currentDateDisplay');
+      if (dateEl) {
+        const now = new Date();
+        dateEl.textContent = 'Date: ' + now.toLocaleDateString('en-IN', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric'
+        });
+      }
+    })();
+
+    // Default sample values from extracted candidate profile
+    const defaultProfile = {
+      candidateName: 'Kirubasagar Jayabalan',
+      emailId: '',
+      mobileNumber: '',
+      totalExperience: '20 Yrs 4 Months',
+      currentCtc: 'Rs. 25 Lacs',
+      expectedCtc: '',
+      noticePeriod: '',
+      idLast4: '',
+      currentLocation: 'Chennai',
+      preferredLocation: 'Chennai',
+      currentDesignation: 'Senior Manager - Training (Training Head)',
+      currentCompany: 'iq backoffice',
+      previousDesignation: 'Manager - Training',
+      previousCompany: 'Aegis - An Essar Company',
+      highestQualification: 'MBA - HR (Sikkim Manipal University)',
+      additionalQualification: 'Diploma - EEE (Sriram Polytechnic)',
+      keySkills: 'Time Management, Leadership Development, Client Management (2.7Y), Experiential Learning Development, Training and Development (8Y), Data Management & Analysis, Vendor Management, Event Management, Behavioural Development, Cost Management, Organisational Coaching, MS Office Proficiency, Emotional Coaching, Planning & Organising, Leadership Coaching, BCP and Crisis Handling, Career Coaching, Life Coaching, Team Building, Process Enhancement (3.2Y), Creative Thinking & Initiatives, Relationship & Network Building (0.6Y), LMS Governance',
+      remarks: ''
+    };
+
+    // Add a dynamic custom row/column to the structured table
+    let customRowCounter = 0;
+    function addCustomRow() {
+      customRowCounter++;
+      const tbody = document.getElementById('structuredTableBody');
+      const tr = document.createElement('tr');
+      tr.className = 'custom-dynamic-row hover:bg-sky-50/40 transition bg-sky-50/20';
+      tr.innerHTML = `
+        <td class="py-2 px-3 sm:px-4 bg-slate-50/80 border-r border-slate-200">
+          <input type="text" placeholder="Custom Field Label (e.g., LinkedIn)"
+            class="custom-field-label w-full px-2.5 py-1.5 text-xs sm:text-sm font-semibold text-[#003366] bg-white rounded-lg border border-slate-300 focus:border-[#0066B3] outline-none" />
+        </td>
+        <td class="p-1.5 sm:px-3">
+          <div class="flex items-center gap-2">
+            <input type="text" placeholder="Enter value for this field..."
+              class="custom-field-value w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-[#0066B3] focus:ring-2 focus:ring-[#0066B3]/20 outline-none text-slate-900 text-sm transition" />
+            <button type="button" onclick="this.closest('tr').remove()" title="Remove row"
+              class="no-print shrink-0 p-2 text-rose-500 hover:text-rose-700 hover:bg-rose-50 rounded-lg transition cursor-pointer">
+              ✕
+            </button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    // Restore pre-populated values
+    function resetToSampleData() {
+      Object.keys(defaultProfile).forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.value = defaultProfile[id];
+          el.classList.remove('border-rose-500', 'ring-2', 'ring-rose-200');
+        }
+      });
+      document.getElementById('validationBanner').classList.add('hidden');
+    }
+
+    // Clear all form fields for a brand-new candidate
+    function clearAllFields() {
+      Object.keys(defaultProfile).forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.value = '';
+          el.classList.remove('border-rose-500', 'ring-2', 'ring-rose-200');
+        }
+      });
+      document.querySelectorAll('.custom-dynamic-row').forEach((row) => row.remove());
+      document.getElementById('validationBanner').classList.add('hidden');
+    }
+
+    // Collect structured data as an array of { label, value }
+    function collectFormData() {
+      const entries = [
+        { label: 'Candidate Full Name', value: document.getElementById('candidateName').value.trim() },
+        { label: 'Email ID', value: document.getElementById('emailId').value.trim() },
+        { label: 'Mobile Number', value: document.getElementById('mobileNumber').value.trim() },
+        { label: 'Total Experience', value: document.getElementById('totalExperience').value.trim() },
+        { label: 'Current CTC', value: document.getElementById('currentCtc').value.trim() },
+        { label: 'Expected CTC', value: document.getElementById('expectedCtc').value.trim() },
+        { label: 'Notice Period', value: document.getElementById('noticePeriod').value.trim() },
+        { label: 'PAN / Aadhaar Last 4 Digits', value: document.getElementById('idLast4').value.trim() || 'N/A' },
+        { label: 'Current Location', value: document.getElementById('currentLocation').value.trim() },
+        { label: 'Preferred Location', value: document.getElementById('preferredLocation').value.trim() },
+        { label: 'Current Designation', value: document.getElementById('currentDesignation').value.trim() },
+        { label: 'Current Company', value: document.getElementById('currentCompany').value.trim() },
+        { label: 'Previous Designation', value: document.getElementById('previousDesignation').value.trim() },
+        { label: 'Previous Company', value: document.getElementById('previousCompany').value.trim() },
+        { label: 'Highest Qualification', value: document.getElementById('highestQualification').value.trim() },
+        { label: 'Additional Qualification', value: document.getElementById('additionalQualification').value.trim() },
+        { label: 'Key Skills', value: document.getElementById('keySkills').value.trim() },
+        { label: 'Remarks', value: document.getElementById('remarks').value.trim() || 'None' }
+      ];
+
+      // Include any custom user-added rows
+      document.querySelectorAll('.custom-dynamic-row').forEach((row, idx) => {
+        const lbl = row.querySelector('.custom-field-label').value.trim() || `Custom Field ${idx + 1}`;
+        const val = row.querySelector('.custom-field-value').value.trim();
+        if (val) {
+          entries.push({ label: lbl, value: val });
+        }
+      });
+
+      return entries;
+    }
+
+    // Form Submit Handler with Validation
+    document.getElementById('candidateForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const requiredIds = [
+        { id: 'candidateName', name: 'Candidate Full Name' },
+        { id: 'emailId', name: 'Email ID' },
+        { id: 'mobileNumber', name: 'Mobile Number' },
+        { id: 'totalExperience', name: 'Total Experience' },
+        { id: 'currentCtc', name: 'Current CTC' },
+        { id: 'expectedCtc', name: 'Expected CTC' },
+        { id: 'noticePeriod', name: 'Notice Period' },
+        { id: 'currentLocation', name: 'Current Location' },
+        { id: 'preferredLocation', name: 'Preferred Location' }
+      ];
+
+      const missing = [];
+      requiredIds.forEach((field) => {
+        const el = document.getElementById(field.id);
+        const val = el.value.trim();
+        const isEmailInvalid = field.id === 'emailId' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+
+        if (!val || isEmailInvalid) {
+          missing.push(isEmailInvalid ? 'Valid Email ID' : field.name);
+          el.classList.add('border-rose-500', 'ring-2', 'ring-rose-200');
+        } else {
+          el.classList.remove('border-rose-500', 'ring-2', 'ring-rose-200');
+        }
+      });
+
+      const banner = document.getElementById('validationBanner');
+      if (missing.length > 0) {
+        document.getElementById('validationMessage').textContent = missing.join(', ');
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      banner.classList.add('hidden');
+
+      // Generate formatted summary
+      const entries = collectFormData();
+      const nowStr = new Date().toLocaleString('en-IN');
+      document.getElementById('submissionTimestamp').textContent = nowStr;
+
+      let summaryText = `====================================================\n`;
+      summaryText += `NTT DATA INDIA — CANDIDATE / CLIENT INFORMATION SHEET\n`;
+      summaryText += `Submitted On: ${nowStr}\n`;
+      summaryText += `====================================================\n\n`;
+
+      entries.forEach((item) => {
+        summaryText += `${item.label}: ${item.value}\n`;
+      });
+
+      document.getElementById('summaryOutput').value = summaryText;
+      document.getElementById('copyToast').classList.add('hidden');
+
+      // Open Modal
+      const modal = document.getElementById('confirmationModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+
+    function closeModal() {
+      const modal = document.getElementById('confirmationModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Reliable Clipboard Copy compatible with iframes / Google Sites
+    function copySummaryToClipboard() {
+      const textarea = document.getElementById('summaryOutput');
+      textarea.select();
+      textarea.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        const toast = document.getElementById('copyToast');
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3500);
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+    }
+
+    // Export as CSV file for Excel / Google Sheets tracking
+    function downloadCSV() {
+      const entries = collectFormData();
+      const headers = entries.map((e) => `"${e.label.replace(/"/g, '""')}"`).join(',');
+      const values = entries.map((e) => `"${e.value.replace(/"/g, '""')}"`).join(',');
+      const csvContent = 'data:text/csv;charset=utf-8,' + encodeURIComponent(headers + '\n' + values);
+
+      const candidateSlug = (document.getElementById('candidateName').value.trim() || 'Candidate')
+        .replace(/[^a-z0-9]/gi, '_');
+
+      const link = document.createElement('a');
+      link.setAttribute('href', csvContent);
+      link.setAttribute('download', `NTT_DATA_India_${candidateSlug}_InfoSheet.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
